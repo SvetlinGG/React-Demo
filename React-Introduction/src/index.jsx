@@ -13,10 +13,12 @@ const rootReactElement = ReactDOM.createRoot(rootHtmlElement);
 
 
 // JSX React 
-const headerSectionJsx = <header className="site-heading">
-    <h1>Hello World!</h1>
-    <h2>The best Framework Ever!</h2>
-</header>
+const headerSectionJsx = (
+    <header className="site-heading">
+        <h1>Hello World!</h1>
+        <h2>The best Framework Ever!</h2>
+    </header>
+    );
 
 
 rootReactElement.render(headerSectionJsx);
