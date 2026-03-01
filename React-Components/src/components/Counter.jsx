@@ -1,11 +1,18 @@
+import { useState } from "react";
 
 export default function Counter(){
 
+    const [ counter, setCounter ] = useState(0)
+
+    const buttonClickHandler = () => {
+        setCounter(counter + 1)
+    }
+
     return (
         <>
-        <h2>Counter</h2>
+        <h2>Counter: {counter}</h2>
 
-        <button onClick="incrementCounter()">Increment</button>
+    <button onClick={buttonClickHandler}>Increment</button>
         </>
     )
 }
