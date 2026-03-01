@@ -1,15 +1,20 @@
 
 import './App.css'
 import Component from './components/Component'
+import MovieList from './components/MovieList'
+import Timer from './components/Timer'
 
 function App() {
   
 
   return (
-    <>
-      <h1>Hello React Components</h1>
+    <main>
       <Component />
-    </>
+      <hr />
+      <MovieList />
+      <hr />
+      <Timer />
+    </main>
   )
 }
 
