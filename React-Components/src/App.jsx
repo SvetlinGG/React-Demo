@@ -1,5 +1,6 @@
 
 import './App.css'
+import AdvancedCounter from './components/AdvancedCounter.jsx'
 import Component from './components/Component'
 import Counter from './components/Counter'
 import MovieList from './components/MovieList'
@@ -17,6 +18,8 @@ function App() {
       <Timer />
       <hr />
       <Counter />
+      <hr />
+      <AdvancedCounter />
     </main>
   )
 }
