@@ -23,7 +23,7 @@ export default function AdvancedCounter(){
                 <div>
                     <button onClick={buttonClickHandler}>Increment</button>
 
-                    <button onClick={hideCounterHandler}>Hide Counter</button>
+                    <button onClick={hideCounterHandler}>{show ? 'Hide' : 'Show'} Counter</button>
                 </div>
                 
             )
