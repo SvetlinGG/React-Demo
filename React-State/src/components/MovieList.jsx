@@ -14,7 +14,13 @@ export default function MovieList(){
     
 
     const addButtonHandler = () => {
+        setMovies(oldState => {
+            let newState = [...oldState];
+            
+            newState.push({id: 4, title: 'Harry Potter', year: 2016});
 
+            return newState;
+        })
     }
 
     return (
