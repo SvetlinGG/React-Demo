@@ -18,9 +18,20 @@ export default function AdvancedCounter(){
         <h2>Advanced Counter</h2>
         <p>Counter: {counter}</p>
 
-        <button onClick={buttonClickHandler}>Increment</button>
+        { show 
+            ? (
+                <div>
+                    <button onClick={buttonClickHandler}>Increment</button>
 
-        <button onClick={hideCounterHandler}>Hide Counter</button>
+                    <button onClick={hideCounterHandler}>Hide Counter</button>
+                </div>
+                
+            )
+            : <p>Counter is Hidden</p>
+        }
+        
+
+        
         </>
     )
 }
