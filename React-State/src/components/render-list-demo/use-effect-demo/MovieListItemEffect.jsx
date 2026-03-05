@@ -5,9 +5,9 @@ export default function MovieListItemEffect({
      year,
     }){
         useEffect(() => {
-            console.log('Render');
+            console.log('On mount');
             
-        })
+        }, [])
 
     return (
         <>
