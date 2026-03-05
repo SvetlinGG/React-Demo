@@ -4,23 +4,21 @@ import MovieListItem from "./MovieListItem";
 export default function MovieList(){
     const [movies, setMovies] = useState([
         
-            {id: 0, title: 'Man of Steel', year: 2010},
-            {id: 1, title: 'The Matrix', year: 2017},
-            {id: 2, title: 'Lord of the Rings', year: 2013},
-            {id: 3, title: 'The Case for Christ', year: 2006},
+            {id: 1, title: 'Man of Steel', year: 2010},
+            {id: 2, title: 'The Matrix', year: 2017},
+            {id: 3, title: 'Lord of the Rings', year: 2013},
+            {id: 4, title: 'The Case for Christ', year: 2006},
         
     ]);
 
     
 
     const addButtonHandler = () => {
-        setMovies(oldState => {
-            let newState = [...oldState];
-            
-            newState.push({id: 4, title: 'Harry Potter', year: 2016});
-
-            return newState;
-        })
+        setMovies(oldState => [
+            {id: 0, title: 'Harry Potter', year: 2016},
+            ...oldState,
+        ]);
+        //setMovies(oldMovies => oldMovies.slice(1))
     }
 
     return (
