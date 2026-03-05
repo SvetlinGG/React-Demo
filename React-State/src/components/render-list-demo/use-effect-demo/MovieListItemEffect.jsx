@@ -4,11 +4,15 @@ export default function MovieListItemEffect({
     title,
      year,
     }){
+        const [rating, setRating] = useState(0);
         useEffect(() => {
             console.log('On mount');
             
         }, []);
-        const [rating, setRating] = useState(0);
+        useEffect(() => {
+            console.log('Rating Updated');
+            
+        }, [rating])
 
         const counterClickHandler = () => {
             setRating(rating + 1);
