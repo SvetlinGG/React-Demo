@@ -1,5 +1,5 @@
 import { useState } from "react";
-import MovieListItemEffect from "./components/render-list-demo/use-effect-demo/MovieListItemEffect";
+import MovieListItemEffect from "./MovieListItemEffect";
 
 export default function MovieListEffect(){
     const [movies, setMovies] = useState([
