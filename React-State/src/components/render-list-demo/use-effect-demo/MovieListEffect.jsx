@@ -15,7 +15,7 @@ export default function MovieListEffect(){
 
     const addButtonHandler = () => {
         setMovies(oldState => [
-            {id: 0, title: 'Harry Potter', year: 2016},
+            {id: oldState.length + 1, title: 'Harry Potter', year: 2016},
             ...oldState,
         ]);
         //setMovies(oldMovies => oldMovies.slice(1))
@@ -23,7 +23,7 @@ export default function MovieListEffect(){
 
     return (
         <>
-        <h2>Movie List</h2>
+        <h2>Movie List Effect</h2>
         <ul>
             {movies.map(movie => <MovieListItemEffect key={movie.id} title={movie.title} year={movie.year} />)}
             

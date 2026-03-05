@@ -15,7 +15,7 @@ export default function MovieList(){
 
     const addButtonHandler = () => {
         setMovies(oldState => [
-            {id: 0, title: 'Harry Potter', year: 2016},
+            {id: oldState.length + 1, title: 'Harry Potter', year: 2016},
             ...oldState,
         ]);
         //setMovies(oldMovies => oldMovies.slice(1))
