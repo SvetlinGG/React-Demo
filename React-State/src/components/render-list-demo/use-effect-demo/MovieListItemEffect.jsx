@@ -1,5 +1,5 @@
 
-export default function MovieListItem({
+export default function MovieListItemEffect({
     title,
      year,
     }){

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import MovieListItem from "./MovieListItemEffect";
+import MovieListItemEffect from "./components/render-list-demo/use-effect-demo/MovieListItemEffect";
 
 export default function MovieListEffect(){
     const [movies, setMovies] = useState([
@@ -25,7 +25,7 @@ export default function MovieListEffect(){
         <>
         <h2>Movie List</h2>
         <ul>
-            {movies.map(movie => <MovieListItem key={movie.id} title={movie.title} year={movie.year} />)}
+            {movies.map(movie => <MovieListItemEffect key={movie.id} title={movie.title} year={movie.year} />)}
             
         </ul>
         <button onClick={addButtonHandler}>Add</button>
