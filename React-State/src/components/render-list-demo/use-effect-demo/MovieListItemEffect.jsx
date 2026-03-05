@@ -1,4 +1,4 @@
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
 
 export default function MovieListItemEffect({
     title,
@@ -7,11 +7,17 @@ export default function MovieListItemEffect({
         useEffect(() => {
             console.log('On mount');
             
-        }, [])
+        }, []);
+        const [rating, setRating] = useState(0);
+
+        const counterClickHandler = () => {
+            setRating(rating + 1);
+        }
 
     return (
         <>
-        <li style={{fontWeight: 'bold', fontSize: '20px'}}>{title} - {year}</li>
+        <li style={{fontWeight: 'bold', fontSize: '20px'}}>{title} - {year} - {rating}</li>
+        <button onClick={counterClickHandler}>Rating +</button>
         </>
     )
 }

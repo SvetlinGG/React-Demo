@@ -2,6 +2,8 @@ import { useState } from "react";
 import MovieListItemEffect from "./MovieListItemEffect";
 
 export default function MovieListEffect(){
+
+    
     const [movies, setMovies] = useState([
         
             {id: 1, title: 'Man of Steel', year: 2010},
@@ -21,6 +23,8 @@ export default function MovieListEffect(){
         //setMovies(oldMovies => oldMovies.slice(1))
     }
 
+    
+
     return (
         <>
         <h2>Movie List Effect</h2>
@@ -28,7 +32,10 @@ export default function MovieListEffect(){
             {movies.map(movie => <MovieListItemEffect key={movie.id} title={movie.title} year={movie.year} />)}
             
         </ul>
+
+        
         <button onClick={addButtonHandler}>Add</button>
+        
         </>
     );
 }
